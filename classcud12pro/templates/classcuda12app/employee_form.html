@@ -1,0 +1,10 @@
+{% extends 'classcuda12app/base.html' %}
+{% block body_block %}
+    <h3>this is created form</h3>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}<br>
+    <input type="submit" class="btn-group-lg bg-success" value="inserted/update data">
+    <input type="reset" class="btn-group-lg bg-info" value="cancel">
+    </form>
+{% endblock %}

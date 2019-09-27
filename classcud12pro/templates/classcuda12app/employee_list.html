@@ -1,0 +1,31 @@
+{% extends 'classcuda12app/base.html' %}
+{% block body_block %}
+    <h3>this is list form</h3>
+
+        <table border="2px">
+        <thead>
+        <tr>
+            <th>S.no</th>
+        <th>Employee Name</th>
+        <th>Employee Detail</th>
+        <th>Employee Update</th>
+        <th>Employee Delete</th>
+        </tr>
+        </thead>
+            {% for emp in employee_list %}
+             <tr>
+                 <td>{{ emp.id }}</td>
+                <td>{{ emp.name|title }}</td>
+                <td><a href="{{ emp.id }}">Detail</a> </td>
+                <td><a href="/update/{{ emp.id }}">Update</a> </td>
+                <td><a href="/delete/{{ emp.id }}">Delete</a> </td>
+
+             </tr>
+       {% endfor %}
+
+        </table><br>
+    <a href="/create" CLASS="btn btn-group-lg bg-primary">ADD NEW EMPLOYEE</a>
+    <a href="/share/" CLASS="btn btn-group-lg bg-primary">shaire post mail</a>
+
+
+{% endblock %}

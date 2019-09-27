@@ -1,0 +1,11 @@
+{% extends 'classcuda12app/base.html' %}
+{% block body_block %}
+    <form method="post">
+      {% csrf_token %}
+    <p>you are want to sure delete '{{ object }}' data</p>
+     <input type="submit" class="btn-group-lg bg-success" value="delete">
+    <a href="/{{ employee.id }}" class="btn-group-lg bg-danger">cancel</a>
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'classcuda12app/base.html' %}
+{% block body_block %}
+    <h3>this is deatils of employee</h3>
+
+        <table border="2px">
+        <thead>
+        <tr>
+            <th>S.no</th>
+        <th>Employee Name</th>
+        <th>Employee Location</th>
+        <th>Employee Salary</th>
+
+        </tr>
+        </thead>
+
+             <tr>
+                 <td>{{ employee.id }}</td>
+                 <td> {{ employee.name }}</td>
+                <td>{{ employee.sal }}</td>
+                <td>{{ employee.loc }}</td>
+
+
+             </tr>
+
+        </table>
+
+
+
+
+
+{% endblock %}
